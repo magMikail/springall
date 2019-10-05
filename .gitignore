@@ -1,5 +1,10 @@
-target/
+*/target
 
 ### IntelliJ IDEA ###
 .idea
 *.iml
+*/HELP.md
+
+*/.mvn/
+*/mvnw
+*/mvnw.*
