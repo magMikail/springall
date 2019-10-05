@@ -1,5 +1,15 @@
-target/
+*/target
 
 ### IntelliJ IDEA ###
 .idea
 *.iml
+*/HELP.md
+
+*/.mvn/
+*/mvnw
+*/mvnw.*
+
+#vaadin
+*/package.json
+*/webpack.config.js
+*/webpack.generated.js
