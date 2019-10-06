@@ -1,5 +1,6 @@
 package com.magmik.example.controllers;
 
+import com.magmik.example.services.GreetingService;
 import org.springframework.stereotype.Controller;
 
 /**
@@ -9,9 +10,15 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class MyController {
 
-    public String hello() {
+    GreetingService greetingService;
+
+    public MyController(GreetingService greetingService) {
+        this.greetingService = greetingService;
+    }
+
+    public String sayHello() {
         System.out.println("Hello!!! ");
 
-        return "foo";
+        return this.greetingService.sayGreeting();
     }
 }

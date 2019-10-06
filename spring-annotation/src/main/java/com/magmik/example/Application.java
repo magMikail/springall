@@ -11,13 +11,10 @@ import org.springframework.context.ApplicationContext;
 public class Application {
 
     public static void main(String[] args) {
-//		SpringApplication.run(Application.class, args);
 
         ApplicationContext ctx = SpringApplication.run(Application.class, args);
 
-        MyController controller = (MyController) ctx.getBean("myController");
-
-        controller.hello();
+        System.out.println(ctx.getBean(MyController.class).sayHello());
         System.out.println(ctx.getBean(GetterInjectedController.class).sayHello());
         System.out.println(ctx.getBean(ConstructorInjectedController.class).sayHello());
 
