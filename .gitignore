@@ -3,7 +3,7 @@ target/
 ### IntelliJ IDEA ###
 .idea
 *.iml
-#*/HELP.md
+*/HELP.md
 
 */.mvn/
 */mvnw
