@@ -1,5 +1,5 @@
 ###Spring boot Annotations
-
+new ClassPathResource("fileInResourceFolder.txt").getFile() 
 Annotation | Description
 ---|---
 @RunWith(SpringRunner.class) | Run test with spring context
