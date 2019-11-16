@@ -14,3 +14,4 @@ $ curl localhost:8080/demo/add -d name=First -d email=someemail@someemailprovide
 * @OneToOne
 * @OneToMany
 
+[Configuring Separate Spring DataSource for Tests](https://www.baeldung.com/spring-testing-separate-data-source)
