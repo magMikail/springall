@@ -16,6 +16,9 @@ $ curl localhost:8080/demo/add -d name=First -d email=someemail@someemailprovide
 
 [Configuring Separate Spring DataSource for Tests](https://www.baeldung.com/spring-testing-separate-data-source)
 
-Add initial data to db -> create insert SQL -> move to resources folder.
-import.sql (Hibernate) / data.sql (Spring JDBC support) will be executed after starting app.
-
+Add initial data to db 
+-> create insert SQL -> move to resources folder -> import.sql (Hibernate) / data.sql (Spring JDBC support) will be executed after starting app.
+-> hibernate -> add to properties
+spring.jpa.properties.hibernate.hbm2ddl.import_files=import_active_users.sql,import_inactive_users.sql
+-> JDBC
+spring.datasource.data=import_active_users.sql,import_inactive_users.sql
