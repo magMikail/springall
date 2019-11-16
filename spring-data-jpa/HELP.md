@@ -15,3 +15,7 @@ $ curl localhost:8080/demo/add -d name=First -d email=someemail@someemailprovide
 * @OneToMany
 
 [Configuring Separate Spring DataSource for Tests](https://www.baeldung.com/spring-testing-separate-data-source)
+
+Add initial data to db -> create insert SQL -> move to resources folder.
+import.sql (Hibernate) / data.sql (Spring JDBC support) will be executed after starting app.
+

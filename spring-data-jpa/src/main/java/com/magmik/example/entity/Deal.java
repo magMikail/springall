@@ -9,6 +9,11 @@ import java.util.Date;
  * Created by magMikail on 10/15/2019.
  **/
 @Entity
+/**
+ * uppercase table name
+ * @Entity(name="BOOK")
+ * spring.jpa.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+ **/
 public class Deal {
     @Id
     @GeneratedValue

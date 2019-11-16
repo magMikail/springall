@@ -13,7 +13,7 @@ import java.util.Collection;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(SpringRunner.class)
-@DataJpaTest
+@DataJpaTest //or @SpringBootTest
 public class MainControllerTest {
 
     @Autowired
