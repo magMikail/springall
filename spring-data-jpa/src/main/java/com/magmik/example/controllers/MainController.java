@@ -25,6 +25,14 @@ public class MainController {
         Customer n = new Customer();
         n.setFirstName(name);
         n.setLastName(email);
+
+//        SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
+//        try {
+//            n.setVersion(sf.parse(sf.format(new Date())));
+//        } catch (ParseException e) {
+//            e.printStackTrace();
+//        }
+
         userRepository.save(n);
         return "Saved";
     }
