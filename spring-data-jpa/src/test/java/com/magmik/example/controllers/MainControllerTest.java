@@ -22,6 +22,7 @@ public class MainControllerTest {
     @Test
     public void addNewUser() throws Exception {
         customerRepository.save(new Customer("addH2User", "addH2LastName"));
+        customerRepository.findAll().forEach(e -> System.out.println("+++ version is : " + e.getVersion()));
         assertEquals(((Collection<?>) customerRepository.findAll()).size(), 1);
     }
 

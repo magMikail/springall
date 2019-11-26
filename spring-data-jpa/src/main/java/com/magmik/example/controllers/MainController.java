@@ -1,5 +1,6 @@
 package com.magmik.example.controllers;
 
+import com.magmik.example.aspect.byAnnotation.LogProcess;
 import com.magmik.example.entity.Customer;
 import com.magmik.example.repos.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,10 +26,19 @@ public class MainController {
         Customer n = new Customer();
         n.setFirstName(name);
         n.setLastName(email);
+
+//        SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
+//        try {
+//            n.setVersion(sf.parse(sf.format(new Date())));
+//        } catch (ParseException e) {
+//            e.printStackTrace();
+//        }
+
         userRepository.save(n);
         return "Saved";
     }
 
+    @LogProcess
     @GetMapping(path = "/all")
     public @ResponseBody
     Iterable<Customer> getAllUsers() {
