@@ -1,5 +1,6 @@
 package com.magmik.example.controllers;
 
+import com.magmik.example.aspect.byAnnotation.LogProcess;
 import com.magmik.example.entity.Customer;
 import com.magmik.example.repos.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,6 +38,7 @@ public class MainController {
         return "Saved";
     }
 
+    @LogProcess
     @GetMapping(path = "/all")
     public @ResponseBody
     Iterable<Customer> getAllUsers() {

@@ -22,3 +22,24 @@ Add initial data to db
 spring.jpa.properties.hibernate.hbm2ddl.import_files=import_active_users.sql,import_inactive_users.sql
 -> JDBC
 spring.datasource.data=import_active_users.sql,import_inactive_users.sql
+
+----------------
+https://www.baeldung.com/database-auditing-jpa
+@MappedSuperclass annotation to
+ allow an entity to inherit properties from a base class.
+----------------
+@Audited
+properties - spring.jpa.properties.org.hibernate.envers.audit_table_suffix=_SUF (default _AUD)
+pom - hibernate-envers 5.3.9.Final
+Access the audit history AuditReader
+ reader = AuditReaderFactory.get(EntityManagerEm);
+getHistory
+ = reader.getRevison(clazz,id)
+
+historyService.getHistory(Document.class, id)
+-------
+abstaract parent Audit
+
+@MappedSuperclass
+
+@EnableJpaAuditing - to the main App class

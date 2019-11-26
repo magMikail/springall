@@ -33,3 +33,6 @@ Content in the first column | Content in the second column
 
 ~~this~~
 
+Links
+https://dzone.com/articles/magic-of-kafka-with-spring-boot
+https://www.baeldung.com/spring-kafka?source=post_page-----6c3a14fe08cb----------------------
