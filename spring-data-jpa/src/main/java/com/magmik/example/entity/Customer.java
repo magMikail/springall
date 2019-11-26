@@ -1,6 +1,9 @@
 package com.magmik.example.entity;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -20,7 +23,7 @@ public class Customer {
     private String lastName;
 
     @NotNull
-    @Temporal(TemporalType.TIMESTAMP)
+//    @Temporal(TemporalType.TIMESTAMP)
     private Date version;
 
     public Customer() {
@@ -41,7 +44,7 @@ public class Customer {
 
     private Date getCurrentDate() throws ParseException {
         Date date = null;
-        SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
+        SimpleDateFormat sf = new SimpleDateFormat("yyyyMMdd_HHmmssSSS");
         date = sf.parse(sf.format(new Date()));
         System.out.println("get Date : " + date);
         return date;
