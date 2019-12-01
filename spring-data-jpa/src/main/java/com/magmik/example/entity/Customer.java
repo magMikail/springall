@@ -1,15 +1,21 @@
 package com.magmik.example.entity;
 
-import javax.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-/**
- * Created by magMikail on 10/14/2019.
- **/
-
+@Getter
+@Setter
+@NoArgsConstructor
 @Entity
 public class Customer {
 
@@ -18,19 +24,13 @@ public class Customer {
     private Long id;
     private String firstName;
     private String lastName;
-
     @NotNull
-    @Temporal(TemporalType.TIMESTAMP)
+//    @Temporal(TemporalType.TIMESTAMP)
     private Date version;
-
-    public Customer() {
-    }
 
     public Customer(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
-
-
     }
 
 //    @PrePersist
@@ -41,7 +41,7 @@ public class Customer {
 
     private Date getCurrentDate() throws ParseException {
         Date date = null;
-        SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
+        SimpleDateFormat sf = new SimpleDateFormat("yyyyMMdd_HHmmssSSS");
         date = sf.parse(sf.format(new Date()));
         System.out.println("get Date : " + date);
         return date;
@@ -54,31 +54,4 @@ public class Customer {
                 id, firstName, lastName);
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public Date getVersion() {
-        return version;
-    }
-
-    public void setVersion(Date version) {
-        this.version = version;
-    }
 }

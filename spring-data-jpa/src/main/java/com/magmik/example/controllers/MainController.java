@@ -7,6 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 @Controller    // This means that this class is a Controller
 @RequestMapping(path = "/demo") // This means URL's start with /demo (after Application path)
 public class MainController {
@@ -27,12 +31,12 @@ public class MainController {
         n.setFirstName(name);
         n.setLastName(email);
 
-//        SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
-//        try {
-//            n.setVersion(sf.parse(sf.format(new Date())));
-//        } catch (ParseException e) {
-//            e.printStackTrace();
-//        }
+        SimpleDateFormat sf = new SimpleDateFormat("yyyyMMdd_HHmmssSSS");
+        try {
+            n.setVersion(sf.parse(sf.format(new Date())));
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
 
         userRepository.save(n);
         return "Saved";
