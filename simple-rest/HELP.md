@@ -1,4 +1,5 @@
 http://private-anon-a67977344c-apifaketory.apiary-mock.com/api/user?limit=1
+https://spring.io/guides/gs/consuming-rest/
 
 https://www.udemy.com/course/spring-framework-5-beginner-to-guru/learn/lecture/8077000
 https://www.baeldung.com/jackson-annotations
