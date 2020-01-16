@@ -8,4 +8,7 @@ public interface DataService {
     Quote getById(Long id);
 
     Collection<Quote> getAll();
+
+    Collection<Quote> getApps();
+
 }

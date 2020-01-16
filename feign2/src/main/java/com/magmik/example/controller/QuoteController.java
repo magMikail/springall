@@ -28,4 +28,9 @@ public class QuoteController {
     public Collection<Quote> getAll() {
         return quotesService.getAll();
     }
+
+    @RequestMapping("/qwe")
+    public Collection<Quote> putMap() {
+        return quotesService.getApps();
+    }
 }
