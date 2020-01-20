@@ -9,6 +9,7 @@ import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
+//https://spring.io/guides/gs/consuming-rest/
 @SpringBootApplication
 public class ConsumingRestApplication {
     private static final Logger log = LoggerFactory.getLogger(ConsumingRestApplication.class);
