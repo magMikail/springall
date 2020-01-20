@@ -40,3 +40,6 @@ https://dzone.com/articles/magic-of-kafka-with-spring-boot
 https://www.baeldung.com/spring-kafka?source=post_page-----6c3a14fe08cb----------------------
 
 -- Git --
+git config --list 
+git config user.name
+git config --global user.name "magMikail"
