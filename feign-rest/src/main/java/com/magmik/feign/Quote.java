@@ -13,18 +13,7 @@ import lombok.ToString;
 @ToString
 public class Quote {
     private String type;
-    private Value value;
-
-
-    @JsonIgnoreProperties(ignoreUnknown = true)
-    @Getter
-    @Setter
-    @NoArgsConstructor
-    @ToString
-    public class Value {
-        private Long id;
-        private String quote;
-    }
+    private Object value;
 }
 
 
