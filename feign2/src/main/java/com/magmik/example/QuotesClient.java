@@ -16,7 +16,7 @@ public interface QuotesClient {
     @RequestLine("GET /")
     Collection<Quote> getAll();
 
-    @RequestLine("GET /5")
+    @RequestLine("GET /")
     @Headers("Content-Type: application/json")
     Collection<Quote> getApps(@QueryMap Map<String, String> queryMap); //GET https://gturnquist-quoters.cfapps.io/api/5?key1=value1&key2=value2&key3=value3
 
