@@ -1,4 +1,4 @@
-package com.magmik.example;
+package com.magmik.example.service.example;
 
 import feign.*;
 import feign.codec.DecodeException;
