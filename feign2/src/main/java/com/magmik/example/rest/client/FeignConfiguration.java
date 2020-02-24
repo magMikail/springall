@@ -1,4 +1,4 @@
-package com.magmik.example;
+package com.magmik.example.rest.client;
 
 import com.google.gson.Gson;
 import feign.Feign;

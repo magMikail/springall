@@ -1,7 +1,7 @@
 package com.magmik.example.service;
 
-import com.magmik.example.QuotesClient;
 import com.magmik.example.model.Quote;
+import com.magmik.example.rest.client.QuotesClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
